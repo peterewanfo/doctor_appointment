@@ -16,26 +16,14 @@ class AppointmentSection extends StatelessWidget {
         padding: EdgeInsets.all(10.0),
         sliver: MultiSliver(
           pushPinnedChildren: true,
-          children: [
-            SliverStack(insetOnOverlap: true, children: [
-              SliverPositioned.fill(
-                top: 20.0,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-              ),
-              MultiSliver(
                 children: [
                   SliverPinnedHeader(
                     child: Center(
-                      child: Container(
-                        padding: EdgeInsets.all(CustomDimensions.smallSpacing),
-                        child: Text("$title", style: Theme.of(context).textTheme.bodyText1)
-                      )
-                    ),
+                        child: Container(
+                            padding:
+                                EdgeInsets.all(CustomDimensions.smallSpacing),
+                            child: Text("$title",
+                                style: Theme.of(context).textTheme.bodyText1))),
                   ),
                   SliverClip(
                       child: MultiSliver(
@@ -50,7 +38,6 @@ class AppointmentSection extends StatelessWidget {
                               start_time:
                                   this.all_appointments[index].from_time,
                               end_time: this.all_appointments[index].to_time,
-                              
                             );
                           },
                           childCount: all_appointments.length,
@@ -59,9 +46,6 @@ class AppointmentSection extends StatelessWidget {
                     ],
                   ))
                 ],
-              )
-            ])
-          ],
         ));
   }
 }
