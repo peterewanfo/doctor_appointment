@@ -24,8 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   fluttertoast: ^7.0.2
-  hooks_riverpod: ^0.11.0
-  flutter_hooks: ^0.14.0
+  hooks_riverpod: ^0.13.1+1
+  flutter_hooks: ^0.16.0
   sliver_tools: ^0.1.10+1
   google_fonts: ^1.1.0
 
